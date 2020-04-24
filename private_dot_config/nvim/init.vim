@@ -45,6 +45,7 @@ set wildmode=longest,list,full
 set lazyredraw
 set showmatch
 set ruler
+set cursorline
 
 " Disable automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
