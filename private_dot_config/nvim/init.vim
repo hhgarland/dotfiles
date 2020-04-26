@@ -113,3 +113,7 @@ let g:deoplete#enable_at_startup = 1
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ }
+
+" Vimwiki settings
+let g:vimwiki_list = [{'path': '~/vimwiki',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
