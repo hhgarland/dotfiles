@@ -58,7 +58,6 @@ set splitbelow splitright
 
 " Searching
 set incsearch
-set nohlsearch
 
 " Folding
 set foldenable

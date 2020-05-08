@@ -8,14 +8,13 @@ Plug 'freitass/todo.txt-vim'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/vim-easy-align'
 Plug 'lervag/vimtex'
+Plug 'plasticboy/vim-markdown'
 Plug 'plytophogy/vim-virtualenv'
 Plug 'reedes/vim-pencil'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-surround'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-unimpaired'
 Plug 'vimwiki/vimwiki'
 " UI & Themes
@@ -33,9 +32,11 @@ colorscheme gruvbox
 set background=dark
 
 " Spaces & tabs
-set tabstop=4
-set softtabstop=4
+set linebreak
 set expandtab
+set tabstop=2
+set shiftwidth=2
+set scrolloff=12
 
 " UI configuration
 set encoding=utf-8
@@ -56,7 +57,6 @@ set splitbelow splitright
 
 " Searching
 set incsearch
-set nohlsearch
 
 " Folding
 set foldenable
@@ -89,6 +89,25 @@ au BufNewFile,BufRead *.py:
     \ set expandtab
     \ set autoindent
     \ set fileformat=unix
+
+" Markdown settings
+" Treat all .md files as markdown
+au BufNewFile,BufRead *.md set filetype=markdown
+" Hide and format markdown elements like **bold**
+au FileType markdown set conceallevel=2
+" Spell check
+au FileType markdown setlocal spell spelllang=en_us
+" Configuration for vim-markdown
+let g:vim_markdown_conceal = 2
+let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_math = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_autowrite = 1
+let g:vim_markdown_edit_url_in = 'tab'
+let g:vim_markdown_follow_anchor = 1
+
 
 " Plugin settings and mappings
 " Neovim remote
