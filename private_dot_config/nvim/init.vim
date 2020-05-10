@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Tools
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'godlygeek/tabular'
 Plug 'freitass/todo.txt-vim'
 Plug 'honza/vim-snippets'
@@ -79,7 +80,7 @@ au BufNewFile,BufRead *.js, *.html, *.css:
     \ set softtabstop=2
     \ set shiftwidth=2
 
-" Python settings
+" Python autocmd and settings
 " PEP8 indendation
 au BufNewFile,BufRead *.py:
     \ set tabstop=4
@@ -90,7 +91,7 @@ au BufNewFile,BufRead *.py:
     \ set autoindent
     \ set fileformat=unix
 
-" Markdown settings
+" Markdown autocmd and settings
 " Treat all .md files as markdown
 au BufNewFile,BufRead *.md set filetype=markdown
 " Hide and format markdown elements like **bold**
@@ -108,6 +109,8 @@ let g:vim_markdown_autowrite = 1
 let g:vim_markdown_edit_url_in = 'tab'
 let g:vim_markdown_follow_anchor = 1
 
+" Yaml autocmd and settings
+au BufReadPost *.yaml set sw=2 ts=2 sts=2 expandtab
 
 " Plugin settings and mappings
 " Neovim remote
