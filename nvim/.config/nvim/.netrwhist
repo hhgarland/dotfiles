@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/hayden/.config/ranger'
+let g:netrw_dirhist_3='/home/hayden/.suckless/st'
+let g:netrw_dirhist_2='/home/hayden/.config/qutebrowser/bookmarks'
+let g:netrw_dirhist_1='/home/hayden/.suckless/dwm'
+let g:netrw_dirhist_0='/home/hayden/.suckless/slstatus'
+let g:netrw_dirhist_9='/home/hayden/.config/nnn'
+let g:netrw_dirhist_8='/home/hayden/.sfeed'
+let g:netrw_dirhist_7='/home/hayden/.sfeed/feeds'
+let g:netrw_dirhist_6='/home/hayden/.sfeed'
+let g:netrw_dirhist_5='/home/hayden'
