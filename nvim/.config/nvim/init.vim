@@ -16,7 +16,6 @@ Plug 'tpope/vim-unimpaired'
 " UI & Themes
 Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
-Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " Make vim more useful
