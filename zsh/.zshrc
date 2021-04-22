@@ -141,5 +141,5 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 # nnn settings
 export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_PLUG="f:finder;o:fzopen;b:bookmarks;t:nmount;v:imgview;p:preview-tabbed;u:getplugs"
-export NNN_COLORS="1234"
+export NNN_COLORS="6234"
 export NNN_FCOLORS="0b0c040a00060e080d070500"
