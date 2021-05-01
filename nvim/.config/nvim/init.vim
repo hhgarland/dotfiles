@@ -1,6 +1,6 @@
 " Plugins call plug#begin('~/.config/nvim/plugged')
-" Tools
 call plug#begin()
+" Tools
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ap/vim-css-color'
 Plug 'chrisbra/csv.vim'
@@ -16,6 +16,8 @@ Plug 'tpope/vim-unimpaired'
 " UI & Themes
 Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " Make vim more useful
@@ -29,6 +31,22 @@ let g:gruvbox_invert_selection='0'
 set background=dark
 colorscheme gruvbox
 
+" Airline configuration
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" Powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.dirty='⚡'
+
 " Spaces, tabs, indendation
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -37,7 +55,7 @@ set smartindent
 set nowrap
 
 " UI configuration
-set laststatus=1
+set laststatus=2
 set encoding=utf-8
 set number relativenumber
 set hidden
@@ -108,3 +126,9 @@ nmap ga <Plug>(EasyAlign)
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
+
+" Fzf keybindings
+map <C-f> :Files<CR>
+map <C-g> :GFiles<CR>
+map <leader>b :Buffers<CR>
+nnoremap <leader>g :Rg<CR>
