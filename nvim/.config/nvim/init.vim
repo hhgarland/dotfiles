@@ -3,7 +3,6 @@ call plug#begin()
 " Tools
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ap/vim-css-color'
-Plug 'chrisbra/csv.vim'
 Plug 'dense-analysis/ale'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
