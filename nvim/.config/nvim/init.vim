@@ -6,9 +6,9 @@ Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -36,7 +36,7 @@ set smartindent
 set nowrap
 
 " UI configuration
-set laststatus=2
+set laststatus=1
 set encoding=utf-8
 set number relativenumber
 set hidden
