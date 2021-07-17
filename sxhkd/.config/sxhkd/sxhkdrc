@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	st
+	alacritty
 
 # program launcher
 super + @space
@@ -23,7 +23,7 @@ super + w
     qutebrowser
 
 # show date & time
-super + {_,shift + } d
+super + {_,shift + } i
     popinfo
 
 #
@@ -119,6 +119,10 @@ super + ctrl + shift + space
 #
 # move/resize
 #
+
+# Rotate tree
+super + shift + {d,a}
+    bspc node @/ -C {forward,backward}
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
