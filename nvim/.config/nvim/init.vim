@@ -33,7 +33,7 @@ set smartindent
 set nowrap
 
 " UI configuration
-set laststatus=1
+set laststatus=2
 set encoding=utf-8
 set number relativenumber
 set hidden
