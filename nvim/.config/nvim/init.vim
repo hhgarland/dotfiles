@@ -6,8 +6,6 @@ Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -106,9 +104,3 @@ nmap ga <Plug>(EasyAlign)
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-
-" Fzf keybindings
-map <C-f> :Files<CR>
-map <C-g> :GFiles<CR>
-map <leader>b :Buffers<CR>
-nnoremap <leader>g :Rg<CR>

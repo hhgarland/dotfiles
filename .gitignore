@@ -1,0 +1,5 @@
+# ignore nvim plugins directory
+nvim/.config/nvim/plugged/
+
+# ignore this file
+nvim/.config/nvim/.netrwhist
