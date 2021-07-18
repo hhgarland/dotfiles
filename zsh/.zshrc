@@ -111,7 +111,7 @@ zstyle :compinstall filename '/home/hayden/.zshrc'
 
 # Path
 if [ -d "/home/hayden/.bin" ] ; then
-        export PATH="/home/hayden/.bin:$PATH"
+        export PATH="/home/hayden/.bin:/home/hayden/.local/bin:$PATH"
 fi
 
 # System defaults
