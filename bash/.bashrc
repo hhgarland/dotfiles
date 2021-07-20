@@ -25,6 +25,7 @@ source git-completion.bash
 # Git prompt
 source git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # PS1 prompt; git prompt is $(__git_ps1 " (%s)")
 export PS1='[\u@\h \w$(__git_ps1 " (%s)")]\\$ \[$(tput sgr0)\]'
