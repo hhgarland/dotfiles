@@ -101,19 +101,19 @@ window:
 # Font configuration
 font:
   normal:
-    family: JetBrainsMono
+    family: monospace
     style: Regular
 
   bold:
-    family: JetBrainsMono
+    family: monospace
     style: Bold
 
   italic:
-    family: JetBrainsMono
+    family: monospace
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono
+    family: monospace
     style: Bold Italic
 
   size: 17
