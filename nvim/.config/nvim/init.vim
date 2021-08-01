@@ -1,14 +1,15 @@
 " Plugins call plug#begin('~/.config/nvim/plugged')
 call plug#begin()
+" Native LSP & auto completion
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+
 " Tools
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ap/vim-css-color'
-Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
+
 " UI & Themes
 Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
@@ -45,6 +46,7 @@ set showmatch
 set ruler
 set cursorline
 highlight Comment cterm=italic
+set completeopt=menuone,noselect
 
 " Disable automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -102,5 +104,5 @@ au BufNewFile,BufFilePre,BufRead *.md:
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
+" Lua setup for LSP
+lua require('lspconfig').pyright.setup{}
