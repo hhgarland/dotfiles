@@ -17,7 +17,7 @@ bspc config paddingless_monocle			true
 bspc config single_monocle				false
 bspc config pointer_follows_monitor		true
 bspc config ignore_ewmh_focus			true
-bspc config automatic_scheme			alternate
+bspc config automatic_scheme			automatic
 
 # Colors
 unfocused=#504945
