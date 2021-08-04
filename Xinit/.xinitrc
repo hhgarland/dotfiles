@@ -61,6 +61,4 @@ feh --bg-scale /home/hayden/Pictures/1619943238251.jpg &
 # statusbar for dwm
 slstatus &
 
-# start wm
 exec dwm
-

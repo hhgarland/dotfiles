@@ -45,7 +45,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54
 '
 
-# nnn settings
+# NNN settings
 export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_PLUG="f:finder;o:fzopen;d:diffs;t:nmount;v:imgview;p:preview-tabbed;u:getplugs"
 export NNN_COLORS="#0f0f0f0f"
