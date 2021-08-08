@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+herbe "$(date)" "$(uptime)" "Desktop $(bspc query -D --names -d focused)"
