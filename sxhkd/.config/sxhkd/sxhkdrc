@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show drun
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -23,7 +23,7 @@ super + w
     qutebrowser
 
 # show date & time
-super + {_,shift + } i
+super + alt + i
     popinfo
 
 #
