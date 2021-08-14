@@ -86,3 +86,8 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
+
+!! SXIV
+Sxiv.font: monospace:size=14
+Sxiv.background: #282828
+Sxiv.foreground: #ebdbb2
