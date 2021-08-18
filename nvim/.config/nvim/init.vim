@@ -18,6 +18,9 @@ Plug 'tpope/vim-surround'
 " ---- UI & Themes
 Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " -- Make vim more useful
@@ -93,6 +96,37 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " ---- LSP
 lua << EOF
 require'lspconfig'.pyright.setup{}
+EOF
+
+" ---- Lualine
+lua << EOF
+require'lualine'.setup {
+  options = {
+    icons_enabled = true,
+    theme = 'gruvbox',
+    component_separators = {'', ''},
+    section_separators = {'', ''},
+    disabled_filetypes = {}
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
 EOF
 
 " ---- Telescope
