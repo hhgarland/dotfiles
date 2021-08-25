@@ -31,16 +31,6 @@ let g:gruvbox_invert_selection='0'
 set background=dark
 colorscheme gruvbox
 
-" -- Statusline
-set laststatus=2
-set statusline=
-set statusline+=\ %y
-set statusline+=\ %r
-set statusline+=\ %F
-set statusline+=%=
-set statusline+=\ %l/%L
-set statusline+=\ [%c]
-
 " -- Spaces, tabs, indendation
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -61,6 +51,17 @@ set ruler
 set cursorline
 highlight Comment cterm=italic
 set completeopt=menuone,noselect
+
+" ---- Statusline
+set laststatus=2
+set statusline=
+set statusline+=\ %y
+set statusline+=\ %r
+set statusline+=\ %F
+set statusline+=\ %m
+set statusline+=%=
+set statusline+=\ %l/%L
+set statusline+=\ [%c]
 
 " -- Disable automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
