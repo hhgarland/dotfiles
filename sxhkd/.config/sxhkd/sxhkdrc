@@ -20,7 +20,7 @@ super + alt + {x}
 
 # web browser
 super + w
-    brave
+    qutebrowser
 
 # show date & time
 super + alt + i
