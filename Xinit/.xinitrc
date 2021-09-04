@@ -56,7 +56,7 @@ xrandr --output HDMI-A-2 --mode 2560x1440 --rate 59.95 &
 picom &
 
 # background image
-feh --bg-scale /home/hayden/Pictures/rocks.jpeg &
+feh --bg-scale /home/hayden/Pictures/1619943238251.jpg &
 
 # statusbar for dwm
 slstatus &
