@@ -7,7 +7,6 @@
 
 # Enable colors and change prompt
 autoload -U colors && colors
-#PROMPT='%F{#cc241d}[%F{#fabd2f}%n%F{#b8bb26}@%F{#83a598}%m%f %F{#d3869b}%~%b%F{#cc241d}]%f%% '
 PROMPT='[%n@%m%f %~%b]%f%% '
 
 # Lines configured by zsh-newuser-install

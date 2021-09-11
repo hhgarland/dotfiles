@@ -13,6 +13,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
 " ---- UI & Themes
@@ -103,6 +104,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " ---- LSP
 lua << EOF
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.ccls.setup{}
 EOF
 
 " ---- Telescope
