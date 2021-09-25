@@ -9,6 +9,9 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" ---- Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " ---- Tools
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
@@ -19,6 +22,8 @@ Plug 'tpope/vim-surround'
 " ---- UI & Themes
 Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " -- Make vim more useful
@@ -107,6 +112,11 @@ require'lspconfig'.pyright.setup{}
 require'lspconfig'.ccls.setup{}
 EOF
 
+" ---- lualine.nvim
+lua << EOF
+require('lualine').setup()
+EOF
+
 " ---- Telescope
 lua << EOF
 require('telescope').setup{
@@ -152,5 +162,17 @@ require('telescope').setup{
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
   }
+}
+EOF
+
+" ---- Treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+ensure_installed = { "bash", "c", "css", "html", "lua", "python" },
+  ignore_install = { "javascript" }, -- List of parsers to ignore installing
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    additional_vim_regex_highlighting = false,
+  },
 }
 EOF
