@@ -22,8 +22,6 @@ Plug 'tpope/vim-surround'
 " ---- UI & Themes
 Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
-Plug 'hoob3rt/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
 " -- Make vim more useful
@@ -110,11 +108,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 lua << EOF
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.ccls.setup{}
-EOF
-
-" ---- lualine.nvim
-lua << EOF
-require('lualine').setup()
 EOF
 
 " ---- Telescope
