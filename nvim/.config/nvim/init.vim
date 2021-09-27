@@ -64,6 +64,7 @@ set statusline+=\ %r
 set statusline+=\ %F
 set statusline+=\ %m
 set statusline+=%=
+set statusline+=\ %{FugitiveStatusline()}
 set statusline+=\ %l/%L
 set statusline+=\ [%c]
 
