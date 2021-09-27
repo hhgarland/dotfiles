@@ -56,14 +56,21 @@ set cursorline
 highlight Comment cterm=italic
 set completeopt=menuone,noselect
 
+" GitGutter function for statusline
+function! GitStatus()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf('+%d ~%d -%d', a, m, r)
+endfunction
+
 " ---- Statusline
 set laststatus=2
 set statusline=
 set statusline+=\%y
+set statusline+=\ %f
 set statusline+=\ %r
-set statusline+=\ %F
 set statusline+=\ %m
 set statusline+=%=
+set statusline+=\ %{GitStatus()}
 set statusline+=\ %{FugitiveStatusline()}
 set statusline+=\ %l/%L
 set statusline+=\ [%c]
