@@ -97,10 +97,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" -- Shortcuts
+" -- Non-plugin keymappings
 inoremap kj <Esc>
 
-" -- Plugin settings and mappings
+" -- Plugin settings and keymappings
 " ---- Shortcuts for vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
