@@ -28,11 +28,10 @@ call plug#end()
 set nocompatible
 
 " -- Colors & syntax
-set termguicolors
 syntax on
 let g:gruvbox_italic=1
-let g:gruvbox_invert_selection='0'
 set background=dark
+set termguicolors
 colorscheme gruvbox
 
 " -- Spaces, tabs, indendation
