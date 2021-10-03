@@ -35,11 +35,22 @@ set termguicolors
 colorscheme gruvbox
 
 " -- Spaces, tabs, indendation
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
+set smarttab
 set smartindent
 set nowrap
+
+" -- Split settings
+set splitbelow splitright
+
+" -- Searching
+set incsearch
+set nohlsearch
+
+" -- Folding
+set foldenable
+set foldlevel=99
+set foldmethod=indent
+nnoremap <space> za
 
 " -- UI configuration
 set encoding=utf-8
@@ -76,19 +87,6 @@ set statusline+=\ [%c]
 
 " -- Disable automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" -- Split settings
-set splitbelow splitright
-
-" -- Searching
-set incsearch
-set nohlsearch
-
-" -- Folding
-set foldenable
-set foldlevel=99
-set foldmethod=indent
-nnoremap <space> za
 
 " -- Movement
 nnoremap <C-J> <C-W><C-J>
