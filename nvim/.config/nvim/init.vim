@@ -9,9 +9,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" ---- Treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 " ---- Tools
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
@@ -193,17 +190,5 @@ require('telescope').setup{
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
   }
-}
-EOF
-
-" ---- Treesitter
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-ensure_installed = { "bash", "c", "css", "html", "lua", "python" },
-  ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    additional_vim_regex_highlighting = false,
-  },
 }
 EOF
