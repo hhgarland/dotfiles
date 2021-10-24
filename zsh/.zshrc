@@ -127,7 +127,7 @@ test -r $d && eval "$(dircolors $d)"
 alias grep="grep --color=auto"
 alias ls="ls --color -F"
 alias ll="ls -l --color -F"
-#alias nnn='nnn -de'
+alias nnn='nnn -e'
 alias notes="nvim ~/Documents/notes.md"
 
 # Fzf settings
