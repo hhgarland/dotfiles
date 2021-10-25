@@ -35,7 +35,7 @@ alias fullclean='make clean && rm -f config.h && git reset --hard origin/master'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
-alias nnn='nnn -de'
+alias nnn='nnn -e'
 alias notes='nvim ~/Documents/notes.md'
 
 # Fzf settings
