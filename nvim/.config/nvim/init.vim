@@ -2,7 +2,10 @@
 call plug#begin()
 " ---- Native LSP & auto completion
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
 
 " ---- Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -61,26 +64,17 @@ set showmatch
 set ruler
 set cursorline
 highlight Comment cterm=italic
-set completeopt=menuone,noselect
+set completeopt=menu,menuone,noselect
 
 " ---- GitGutter function for statusline
 function! GitStatus()
   let [a,m,r] = GitGutterGetHunkSummary()
   return printf('+%d ~%d -%d', a, m, r)
 endfunction
-"
-"" ---- Statusline
+
+" ---- Statusline
 set laststatus=2
-set statusline=
-set statusline+=\%y
-set statusline+=\ %f
-set statusline+=\ %r
-set statusline+=\ %{GitStatus()}
-set statusline+=\ %m
-set statusline+=%=
-set statusline+=\ %{FugitiveStatusline()}
-set statusline+=\ %l/%L
-set statusline+=\ [%c]
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}\ \%{GitStatus()}%=%-14.(%l,%c%V%)\ %P
 
 " -- Disable automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -110,6 +104,60 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 lua << EOF
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.ccls.setup{}
+EOF
+
+" ---- nvim-cmp
+lua <<EOF
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
+
+  cmp.setup({
+    snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        -- require'snippy'.expand_snippet(args.body) -- For `snippy` users.
+      end,
+    },
+    mapping = {
+      ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+      ['<C-e>'] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'ultisnips' }, -- For ultisnips users.
+      -- { name = 'snippy' }, -- For snippy users.
+    }, {
+      { name = 'buffer' },
+    })
+  })
+
+  -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
 EOF
 
 " ---- Telescope
