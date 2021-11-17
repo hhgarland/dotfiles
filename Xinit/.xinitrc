@@ -52,8 +52,8 @@ fi
 xrandr --output HDMI-A-2 --mode 2560x1440 --rate 59.95 &
 
 # compositor
-picom -cCGf &
-#picom &
+#picom -cCGf &
+picom --config $HOME/.config/picom/picom.conf --vsync --experimental-backends &
 
 # background image
 feh --bg-scale /home/hayden/Pictures/rocks.jpeg &
