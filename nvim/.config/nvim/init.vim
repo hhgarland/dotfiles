@@ -26,8 +26,8 @@ Plug 'tpope/vim-surround'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " ---- UI & Themes
-Plug 'airblade/vim-gitgutter'
 Plug 'gruvbox-community/gruvbox'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 " -- Make vim more useful
@@ -72,15 +72,9 @@ set cursorline
 highlight Comment cterm=italic
 set completeopt=menu,menuone,noselect
 
-" ---- GitGutter function for statusline
-function! GitStatus()
-  let [a,m,r] = GitGutterGetHunkSummary()
-  return printf('+%d ~%d -%d', a, m, r)
-endfunction
-
 " ---- Statusline
 set laststatus=2
-set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}\ \%{GitStatus()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}\ \%{get(b:,'gitsigns_status','')}\ %=%P
 
 " -- Disable automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -106,6 +100,11 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " -- Lua stuff
+" ---- gitsigns
+lua << EOF
+require('gitsigns').setup()
+EOF
+
 " ---- LSP
 lua << EOF
 require'lspconfig'.pyright.setup{}
