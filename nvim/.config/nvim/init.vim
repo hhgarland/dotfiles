@@ -28,6 +28,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " ---- UI & Themes
 Plug 'gruvbox-community/gruvbox'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'sainnhe/gruvbox-material'
+
 call plug#end()
 
 " -- Make vim more useful
@@ -35,10 +37,9 @@ set nocompatible
 
 " -- Colors & syntax
 syntax on
-let g:gruvbox_italic=1
 set background=dark
 set termguicolors
-colorscheme gruvbox
+colorscheme gruvbox-material
 
 " -- Spaces, tabs, indendation
 set smarttab
