@@ -52,6 +52,7 @@ test -r $d && eval "$(dircolors $d)"
 # Aliases
 alias grep="grep --color=auto"
 alias ls="ls --color -F"
+alias la="ls -la --color -F"
 alias ll="ls -l --color -F"
 alias nnn='nnn -e'
 alias notes="nvim ~/Documents/notes.md"

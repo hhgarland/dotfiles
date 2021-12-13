@@ -1,4 +1,4 @@
-!! Gruvbox Material Dark
+! Gruvbox Material Dark
 *background: #282828
 *foreground: #d4be98
 
@@ -88,7 +88,7 @@ URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
 
-!! SXIV
+!! sxiv
 Sxiv.font: monospace:size=14
 Sxiv.background: #282828
 Sxiv.foreground: #d4be98
