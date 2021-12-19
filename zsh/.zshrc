@@ -54,14 +54,15 @@ alias grep="grep --color=auto"
 alias ls="ls --color -F"
 alias la="ls -la --color -F"
 alias ll="ls -l --color -F"
+alias lt="ls -lt --color -F"
 alias nnn='nnn -e'
 alias notes="nvim ~/Documents/notes.md"
 
 # Fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color fg:#d4be98,bg:#282828,hl:#e78a4e,fg+:#d4be98,bg+:#32302f,hl+:#e78a4e
---color info:#7daea3,prompt:#d4be98,spinner:#e78a4e,pointer:#7daea3,marker:#e1bb7e,header:#665c54
+--color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#282828,hl+:#fabd2f
+--color info:#83a598,prompt:#ebdbb2,spinner:#fabd2f,pointer:#7daea3,marker:#a89984,header:#282828
 '
 
 # NNN settings

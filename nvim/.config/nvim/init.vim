@@ -26,9 +26,9 @@ Plug 'tpope/vim-surround'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " ---- UI & Themes
-Plug 'gruvbox-community/gruvbox'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'sainnhe/gruvbox-material'
+Plug 'rktjmp/lush.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
 
 call plug#end()
 
@@ -39,7 +39,7 @@ set nocompatible
 syntax on
 set background=dark
 set termguicolors
-colorscheme gruvbox-material
+colorscheme gruvbox
 
 " -- Spaces, tabs, indendation
 set smarttab
