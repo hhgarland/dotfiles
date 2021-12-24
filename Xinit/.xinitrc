@@ -58,6 +58,6 @@ picom -cCGf &
 walset &
 
 # statusbar for dwm
-slstatus &
+#slstatus &
 
-exec dwm
+exec bspwm
