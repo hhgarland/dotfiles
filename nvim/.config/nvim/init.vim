@@ -22,13 +22,9 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
-" ---- Treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 " ---- UI & Themes
+Plug 'gruvbox-community/gruvbox'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'rktjmp/lush.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
 
 call plug#end()
 
@@ -39,6 +35,7 @@ set nocompatible
 syntax on
 set background=dark
 set termguicolors
+let g:gruvbox_italic=1
 colorscheme gruvbox
 
 " -- Spaces, tabs, indendation
@@ -214,20 +211,3 @@ require('telescope').setup{
 }
 EOF
 
-" ---- Treesitter
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
-  ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
-EOF
