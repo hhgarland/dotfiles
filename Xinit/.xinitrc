@@ -57,6 +57,9 @@ picom -cCGf &
 # set background image
 walset &
 
+# dunst
+dunst &
+
 # statusbar for dwm
 #slstatus &
 
