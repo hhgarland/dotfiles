@@ -8,14 +8,14 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run
+	rofi -terminal alacritty -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
 # lock screen
-super + alt + {x}
+super + x
     slock
 
 # web browser
