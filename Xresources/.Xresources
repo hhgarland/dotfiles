@@ -1,7 +1,5 @@
-! Gruvbox Dark
-! hard contrast: *background: #1d2021
+!! Gruvbox Dark
 *background: #282828
-! soft contrast: *background: #32302f
 *foreground: #ebdbb2
 ! Black + DarkGrey
 *color0:  #282828
