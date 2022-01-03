@@ -75,17 +75,17 @@ window:
   #startup_mode: Windowed
 
   # Window title
-  #title: Alacritty
+  title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
   #dynamic_title: true
 
   # Window class (Linux/BSD only):
-  #class:
+  class:
     # Application instance name
-    #instance: Alacritty
+    instance: Alacritty
     # General application class
-    #general: Alacritty
+    general: Alacritty
 
   # GTK theme variant (Linux/BSD only)
   #
@@ -93,10 +93,10 @@ window:
   # and `light`. Set this to `None` to use the default theme variant.
   #gtk_theme_variant: None
 
-#scrolling:
+scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
-  #history: 10000
+  history: 5000
 
   # Scrolling distance multiplier.
   #multiplier: 3
@@ -178,9 +178,7 @@ draw_bold_text_with_bright_colors: true
   # Colors (Gruvbox dark)
 colors:
   primary:
-    # hard contrast background - '#1d2021'
     background:        &gruvbox_dark_bg '#282828'
-    # soft contrast background - '#32302f'
     foreground:        '#ebdbb2'
     bright_foreground: '#fbf1c7'
     dim_foreground:    '#a89984'
