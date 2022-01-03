@@ -80,7 +80,7 @@ label-padding = 1
 [module/bspwm]
 type = internal/bspwm
 format = <label-state>
-format-padding = 1
+format-padding = 0
 index-sort = true
 
 enable-click = true
