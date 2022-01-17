@@ -3,12 +3,13 @@
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.config/polybar/launch.sh
+pgrep bspswallow || bspswallow &
 
 # Monitors
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 # BSPWM configuration
-bspc config border_width                2
+bspc config border_width                1
 bspc config window_gap                  10
 bspc config split_ratio                 0.50
 bspc config single_monocle		false
@@ -23,8 +24,8 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 # Colors
-presel=#504945
-unfocused=#504945
+presel=#282828
+unfocused=#282828
 focused=#928374
 
 bspc config active_border_color   $focused
