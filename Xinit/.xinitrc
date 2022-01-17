@@ -61,6 +61,6 @@ walset &
 dunst &
 
 # statusbar for dwm
-#slstatus &
+slstatus &
 
-exec bspwm
+exec dwm
