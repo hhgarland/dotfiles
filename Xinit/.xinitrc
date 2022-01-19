@@ -52,7 +52,8 @@ fi
 xrandr --output HDMI-A-2 --mode 2560x1440 --rate 59.95 &
 
 # compositor
-picom -cCGf &
+#picom -cCGf &
+picom &
 
 # set background image
 walset &
