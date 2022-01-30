@@ -34,19 +34,21 @@ export PS1='[\u@\h \w$(__git_ps1 " (%s)")]\\$ \[$(tput sgr0)\]'
 alias fullclean='make clean && rm -f config.h && git reset --hard origin/master'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
+alias la='ls -la --color=auto'
 alias ll='ls -l --color=auto'
+alias lt='ls -lt --color=auto'
 alias nnn='nnn -e'
 alias notes='nvim ~/Documents/notes.md'
 
 # Fzf settings
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
---color info:#83a598,prompt:#bdae93,spinner:#fabd2f,pointer:#83a598,marker:#fe8019,header:#665c54
+--color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#282828,hl+:#fabd2f
+--color info:#83a598,prompt:#ebdbb2,spinner:#fabd2f,pointer:#7daea3,marker:#a89984,header:#282828
 '
 
 # NNN settings
 export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_PLUG="f:finder;o:fzopen;d:diffs;t:nmount;v:imgview;p:preview-tabbed;u:getplugs"
-export NNN_COLORS="#0f0f0f0f"
+export NNN_COLORS="6234"
 export NNN_FCOLORS="0b0c040a00060e080d070500"
