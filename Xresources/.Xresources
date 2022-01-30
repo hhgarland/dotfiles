@@ -27,19 +27,19 @@
 *color15: #ebdbb2
 
 !! Font settings
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
+Xft.dpi: 117
+Xft.antialias: 1
+Xft.hinting: 1
 Xft.rgba: rgb
-Xft.autohint: true
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcdfilter
+Xft.autohint: 0
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
 
 !! Xterm fonts
-*.font: xft:monospace:size=17:antialias=true:autohint=true;
-*.boldFont: xft:monospace:style=Bold:size=17
-*.italicFont: xft:monospace:style=Italic:size=17
-*.boldItalicfont: xft:monospace:style=Bold Italic:size=17
+*.font: xft:monospace:size=14:antialias=true:autohint=true;
+*.boldFont: xft:monospace:style=Bold:size=14
+*.italicFont: xft:monospace:style=Italic:size=14
+*.boldItalicfont: xft:monospace:style=Bold Italic:size=14
 
 !! Xterm transparency
 *.alpha: 1
