@@ -3,7 +3,6 @@ from typing import List  # noqa: F401
 from libqtile import bar, layout, widget, extension
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-#from libqtile.extension.dmenu import DmenuRun
 
 mod = "mod4"
 terminal = "st"
@@ -50,7 +49,7 @@ keys = [
         fontsize="13",
         dmenu_command="dmenu_run",
         dmenu_height=38,
-        dmenu_prompt="> ",
+        dmenu_prompt=">",
         background="282828",
         foreground="ebdbb2",
         selected_foreground="fabd2f",
@@ -153,6 +152,7 @@ screens = [
                     foreground='ebdbb2'
                     ),
                 widget.CurrentLayout(
+                    fmt='缾 {}',
                     foreground='928374',
                     ),
                 widget.TextBox(
@@ -161,7 +161,7 @@ screens = [
                     padding=4
                     ),
                 widget.Clock(
-                    format="%Y-%m-%d (%a) %H:%M",
+                    format=" %Y-%m-%d %a %H:%M",
                     foreground="928374",
                     ),
                 # widget.QuickExit(),
