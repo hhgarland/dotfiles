@@ -57,6 +57,7 @@ alias ll="ls -l --color -F"
 alias lt="ls -lt --color -F"
 alias nnn='nnn -e'
 alias notes="nvim ~/Documents/notes.md"
+alias dwmc='cd ~/.suckless/dwm && nvim config.def.h'
 
 # Fzf settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
