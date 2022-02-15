@@ -55,7 +55,7 @@ xrandr --output HDMI-A-2 --mode 2560x1440 --rate 59.95 &
 picom &
 
 # set background image
-walset &
+nitrogen --restore &
 
 # dunst
 dunst &
@@ -64,7 +64,6 @@ dunst &
 sxhkd &
 
 # statusbar for dwm
-#slstatus &
+slstatus &
 
-#exec dwm
-qtile start
+exec dwm
