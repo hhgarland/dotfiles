@@ -40,20 +40,22 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     #Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod], "x", lazy.spawn('slock'), desc="Lock screen"),
+    Key([mod], "w", lazy.spawn('firefox'), desc="Launch web browser"),
     Key([mod], 'p', lazy.run_extension(extension.DmenuRun(
         font="JetBrains Mono",
         fontsize="13",
         dmenu_command="dmenu_run",
-        dmenu_height=38,
+        dmenu_height=34,
         dmenu_prompt=">",
         background="282828",
-        foreground="ebdbb2",
-        selected_foreground="fabd2f",
-        selected_background="3c3836"
+        foreground="928374",
+        selected_foreground="ebdbb2",
+        selected_background="282828"
     ))),
 ]
 
@@ -117,7 +119,7 @@ layouts = [
 widget_defaults = dict(
     font="JetBrains Mono",
     fontsize=22,
-    padding=3,
+    padding=2,
     background="#282828",
 )
 extension_defaults = widget_defaults.copy()
@@ -126,47 +128,60 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.TextBox(
-                    fontsize=34,
-                    foreground='458588',
-                    padding=8,
-                    text='',
-                    ),
+                #widget.TextBox(
+                #    fontsize=34,
+                #    foreground='458588',
+                #    padding=8,
+                #    text='',
+                #    ),
                 widget.GroupBox(
                     active='928374',
                     block_highlight_text_color='fabd2f',
                     disable_drag=True,
                     hide_unused=True,
-                    highlight_method='block',
+                    highlight_method='text',
                     inactive='928374',
                     rounded=True,
                     spacing=8,
-                    this_current_screen_border='3c3836',
+                    this_current_screen_border='ebdbb2',
                     ),
                 widget.TextBox(
                     foreground='665c54',
                     text='|',
-                    padding=4
+                    padding=2
                     ),
                 widget.WindowName(
-                    foreground='ebdbb2'
+                    foreground='ebdbb2',
+                    padding=2
+                    ),
+                widget.TextBox(
+                    fontsize=28,
+                    foreground='928374',
+                    text='缾',
+                    padding=8
                     ),
                 widget.CurrentLayout(
-                    fmt='缾 {}',
-                    foreground='928374',
+                    foreground='ebdbb2'
                     ),
                 widget.TextBox(
                     foreground='665c54',
                     text='|',
-                    padding=4
+                    padding=2
+                    ),
+                widget.TextBox(
+                    fontsize=28,
+                    foreground='928374',
+                    text='',
+                    padding=6
                     ),
                 widget.Clock(
-                    format=" %Y-%m-%d %a %H:%M",
-                    foreground="928374",
+                    format="%Y-%m-%d %a %H:%M",
+                    foreground='ebdbb2',
+                    padding=6
                     ),
                 # widget.QuickExit(),
             ],
-            38,
+            34,
             #border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             #border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
