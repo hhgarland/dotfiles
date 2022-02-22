@@ -36,10 +36,10 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 !! Xterm fonts
-*.font: xft:monospace:size=14:antialias=true:autohint=true;
-*.boldFont: xft:monospace:style=Bold:size=14
-*.italicFont: xft:monospace:style=Italic:size=14
-*.boldItalicfont: xft:monospace:style=Bold Italic:size=14
+Xft.font: xft:JetBrains Mono:size=14
+Xft.boldFont: xft:JetBrains Mono:style=Bold:size=14
+Xft.italicFont: xft:JetBrains Mono:style=Italic:size=14
+Xft.boldItalicfont: xft:JetBrains Mono:style=Bold Italic:size=14
 
 !! Xterm transparency
 *.alpha: 1
