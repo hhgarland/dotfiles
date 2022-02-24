@@ -41,7 +41,7 @@ fi
 # System defaults
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="qutebrowser"
+export BROWSER="firefox"
 export READER="zathura"
 export COLORTERM="truecolor"
 

@@ -11,7 +11,7 @@ fi
 [[ $- != *i* ]] && return
 
 # System defaults
-export BROWSER=qutebrowser
+export BROWSER=firefox
 export EDITOR=nvim
 export PATH=/home/hayden/.bin:/home/hayden/.local/bin:$PATH
 export READER=zathura
