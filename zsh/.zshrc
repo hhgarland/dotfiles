@@ -56,7 +56,7 @@ alias la="ls -la --color -F"
 alias ll="ls -l --color -F"
 alias lt="ls -lt --color -F"
 alias nnn='nnn -e'
-alias notes="nvim ~/Documents/notes.md"
+alias notes="nvim ~/Documents/notes/index.md"
 alias dwmc='cd ~/.suckless/dwm && nvim config.def.h'
 
 # Fzf settings
@@ -68,6 +68,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # NNN settings
 export NNN_FIFO="/tmp/nnn.fifo"
-export NNN_PLUG="f:finder;o:fzopen;b:bookmarks;t:nmount;v:imgview;p:preview-tabbed;u:getplugs"
+export NNN_PLUG="f:finder;o:fzopen;b:bookmarks;t:nmount;v:imgview;p:preview-tui;u:getplugs"
 export NNN_COLORS="6234"
 export NNN_FCOLORS="0b0c040a00060e080d070500"
+
+# tmuxp completion
+eval "$(_TMUXP_COMPLETE=zsh_source tmuxp)"
