@@ -1,5 +1,5 @@
 #
-# ~/.zshrc
+# zshrc
 #
 
 # If not running interactively, don't do anything
@@ -33,18 +33,6 @@ zstyle ':vcs_info:*' enable git
 
 zstyle :compinstall filename '/home/hayden/.zshrc'
 
-# Path
-if [ -d "/home/hayden/.bin" ] ; then
-        export PATH="/home/hayden/.bin:/home/hayden/.local/bin:$PATH"
-fi
-
-# System defaults
-export EDITOR="nvim"
-export TERMINAL="st"
-export BROWSER="firefox"
-export READER="zathura"
-export COLORTERM="truecolor"
-
 # Directory colors
 d=.dircolors
 test -r $d && eval "$(dircolors $d)"
@@ -65,12 +53,5 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color fg:#ebdbb2,bg:#282828,hl:#fabd2f,fg+:#ebdbb2,bg+:#282828,hl+:#fabd2f
 --color info:#83a598,prompt:#ebdbb2,spinner:#fabd2f,pointer:#7daea3,marker:#a89984,header:#282828
 '
-
-# NNN settings
-export NNN_FIFO="/tmp/nnn.fifo"
-export NNN_PLUG="f:finder;o:fzopen;b:bookmarks;t:nmount;v:imgview;p:preview-tui;u:getplugs"
-export NNN_COLORS="6234"
-export NNN_FCOLORS="0b0c040a00060e080d070500"
-
 # tmuxp completion
 eval "$(_TMUXP_COMPLETE=zsh_source tmuxp)"
