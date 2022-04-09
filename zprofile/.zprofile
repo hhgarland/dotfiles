@@ -6,7 +6,7 @@
 
 # Path
 if [ -d "/home/hayden/.bin" ] ; then
-        export PATH="/home/hayden/.bin:/home/hayden/.local/bin:$PATH"
+        export PATH="/home/hayden/.bin:/home/hayden/.local/bin:/home/hayden/.cargo/env:$PATH"
 fi
 
 # System defaults
