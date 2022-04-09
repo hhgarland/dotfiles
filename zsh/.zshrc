@@ -44,7 +44,7 @@ alias la="ls -la --color -F"
 alias ll="ls -l --color -F"
 alias lt="ls -lt --color -F"
 alias nnn='nnn -e'
-alias notes="nvim ~/Documents/notes/index.md"
+alias notes="nvim ~/documents/notes/index.md"
 alias dwmc='cd ~/.suckless/dwm && nvim config.def.h'
 
 # Fzf settings
