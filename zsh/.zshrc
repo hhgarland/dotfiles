@@ -41,6 +41,7 @@ test -r $d && eval "$(dircolors $d)"
 alias grep="grep --color=auto"
 alias ls="ls --color -F"
 alias la="ls -la --color -F"
+alias lg="lazygit"
 alias ll="ls -l --color -F"
 alias lt="ls -lt --color -F"
 alias nnn='nnn -e'
