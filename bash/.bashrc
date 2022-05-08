@@ -10,10 +10,12 @@ fi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Path
+export PATH=/home/hayden/.bin:/home/hayden/.local/bin:$PATH
+
 # System defaults
 export BROWSER=firefox
 export EDITOR=nvim
-export PATH=/home/hayden/.bin:/home/hayden/.local/bin:$PATH
 export READER=zathura
 export TERMCD=st
 export TERMINAL=st
@@ -35,6 +37,7 @@ alias fullclean='make clean && rm -f config.h && git reset --hard origin/master'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias la='ls -la --color=auto'
+alias lg='lazygit'
 alias ll='ls -l --color=auto'
 alias lt='ls -lt --color=auto'
 alias nnn='nnn -e'
@@ -52,4 +55,6 @@ export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_PLUG="f:finder;o:fzopen;d:diffs;t:nmount;v:imgview;p:preview-tabbed;u:getplugs"
 export NNN_COLORS="6234"
 export NNN_FCOLORS="0b0c040a00060e080d070500"
+
+# Called from bash_profile
 . "$HOME/.cargo/env"
