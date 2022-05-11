@@ -41,7 +41,7 @@ alias lg='lazygit'
 alias ll='ls -l --color=auto'
 alias lt='ls -lt --color=auto'
 alias nnn='nnn -e'
-alias notes='nvim ~/Documents/notes.md'
+alias notes='nvim ~/documents/notes/index.md'
 
 # Fzf settings
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
