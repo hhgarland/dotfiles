@@ -64,6 +64,6 @@ dunst &
 sxhkd &
 
 # statusbar for dwm
-slstatus &
+# slstatus &
 
-exec dwm
+exec bspwm
