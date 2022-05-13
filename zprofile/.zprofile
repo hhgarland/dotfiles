@@ -11,8 +11,8 @@ fi
 
 # System defaults
 export EDITOR="nvim"
-export TERMINAL="st"
-export BROWSER="firefox"
+export TERMINAL="alacritty"
+export BROWSER="chromium"
 export READER="zathura"
 export COLORTERM="truecolor"
 

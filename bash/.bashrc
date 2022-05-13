@@ -14,11 +14,12 @@ fi
 export PATH=/home/hayden/.bin:/home/hayden/.local/bin:$PATH
 
 # System defaults
-export BROWSER=firefox
+export BROWSER=chromium
+export COLORTERM=truecolor
 export EDITOR=nvim
 export READER=zathura
-export TERMCD=st
-export TERMINAL=st
+export TERMCD=alacritty
+export TERMINAL=alacritty
 export VISUAL=nvim
 
 # Git tab completion
